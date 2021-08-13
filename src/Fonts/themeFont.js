@@ -18,6 +18,12 @@ const Fonts = () => (
         font-display: swap;
         src: url('./GraphikMedium.otf') format('otf');
       }
+      @font-face {
+        font-family: 'Graphik Font';
+        font-style: black;
+        font-display: swap;
+        src: url('./GraphikBlack.otf') format('otf');
+      }
       `}
   />
 );
