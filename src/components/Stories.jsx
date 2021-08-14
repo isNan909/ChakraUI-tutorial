@@ -23,7 +23,18 @@ function Stories() {
             </Box>
           </Box>
         </Box>
-        <Grid mt="10" mb="40" templateColumns="repeat(3, 1fr)" gap={6}>
+        <Grid
+          mt="10"
+          mb="40"
+          templateColumns={{
+            sm: 'repeat(2, 1fr)',
+            md: 'repeat(3, 1fr)',
+            lg: 'repeat(3, 1fr)',
+            xl: 'repeat(3, 1fr)',
+            base: 'repeat(1, 1fr)',
+          }}
+          gap={6}
+        >
           <Box width="100%" align="left">
             <Link>
               <Image

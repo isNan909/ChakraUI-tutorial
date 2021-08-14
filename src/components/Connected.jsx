@@ -16,7 +16,15 @@ function Connected() {
           justify-content="space-between"
           alignItems="center"
         >
-          <Box>
+          <Box
+            display={{
+              sm: 'none',
+              md: 'block',
+              lg: 'block',
+              xl: 'block',
+              base: 'none',
+            }}
+          >
             <Image w="260px" src={deviceLeft}></Image>
           </Box>
           <Box pos="relative" mx="auto" align="center">
@@ -29,7 +37,15 @@ function Connected() {
               <Image w="180px" p="5" src={iosAppstore}></Image>
             </Box>
           </Box>
-          <Box>
+          <Box
+            display={{
+              sm: 'none',
+              md: 'block',
+              lg: 'block',
+              xl: 'block',
+              base: 'none',
+            }}
+          >
             <Image w="260px" right="0" src={deviceRight}></Image>
           </Box>
         </Box>

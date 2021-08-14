@@ -19,6 +19,17 @@ import rightArrow from '../assets/right-arrow.svg';
 function Banner() {
   return (
     <>
+      {/* <Box
+        color={{
+          sm: 'red',
+          md: 'blue',
+          lg: 'green',
+          xl: 'cyan',
+          base: 'black',
+        }}
+      >
+        This is a color box sample
+      </Box> */}
       <header>
         <Box
           d="flex"
@@ -43,7 +54,18 @@ function Banner() {
       <Box>
         {/* main punch text */}
         <Container maxW="container.xl">
-          <Box d="flex" alignItems="center" py="20">
+          <Box
+            d="flex"
+            alignItems="center"
+            py="20"
+            flexDirection={{
+              sm: 'column',
+              md: 'row',
+              lg: 'row',
+              xl: 'row',
+              base: 'column',
+            }}
+          >
             <Box mr="6">
               <Heading as="h1" size="2xl">
                 <Box fontWeight="black">
@@ -63,7 +85,16 @@ function Banner() {
         </Container>
         {/* three boxes */}
         <Container maxW="container.xl" mt={10}>
-          <Grid templateColumns="repeat(3, 1fr)" gap={6}>
+          <Grid
+            templateColumns={{
+              sm: 'repeat(1, 1fr)',
+              md: 'repeat(3, 1fr)',
+              lg: 'repeat(3, 1fr)',
+              xl: 'repeat(3, 1fr)',
+              base: 'repeat(1, 1fr)',
+            }}
+            gap={6}
+          >
             <Box>
               <Image
                 w="100%"
@@ -108,7 +139,13 @@ function Banner() {
             direction="row"
             display="flex"
             flexWrap="wrap"
-            justifyContent="space-between"
+            justifyContent={{
+              sm: 'flex-start',
+              md: 'space-between',
+              lg: 'space-between',
+              xl: 'space-between',
+              base: 'flex-start',
+            }}
             my="10"
           >
             <Badge
@@ -199,19 +236,56 @@ function Banner() {
         </Container>
         {/* last header section */}
         <Container maxW="container.xl" mt={20}>
-          <Grid templateColumns="repeat(2, 1fr)" gap={6}>
+          <Grid
+            templateColumns={{
+              sm: 'repeat(1, 1fr)',
+              md: 'repeat(2, 1fr)',
+              lg: 'repeat(2, 1fr)',
+              xl: 'repeat(2, 1fr)',
+              base: 'repeat(1, 1fr)',
+            }}
+            gap={6}
+          >
             <Box>
               <Heading as="h3" size="lg" mb="7">
                 What do you want to do?
               </Heading>
-              <Box d="flex" alignItems="center">
-                <Box flexBasis={'50%'} mr="2">
+              <Box
+                d="flex"
+                alignItems="center"
+                flexDirection={{
+                  sm: 'column',
+                  md: 'row',
+                  lg: 'row',
+                  xl: 'row',
+                  base: 'column',
+                }}
+                w="100%"
+              >
+                <Box
+                  flexBasis={{
+                    sm: '100%',
+                    md: '50%',
+                    lg: '50%',
+                    xl: '50%',
+                    base: '100%',
+                  }}
+                  w="100%"
+                  mr={{
+                    sm: '0',
+                    md: '2',
+                    lg: '2',
+                    xl: '2',
+                    base: '0',
+                  }}
+                >
                   <FormControl id="email">
                     <Box pos="relative">
                       <Input
                         pl={'8'}
                         placeholder="Search for 'tennis'"
                         type="text"
+                        w="100%"
                       />
                       <Box pos="absolute" top="3" left="2">
                         <svg
@@ -219,7 +293,7 @@ function Banner() {
                           width="18"
                           height="18"
                           viewBox="0 0 20 20"
-                          fill="#d9d9d9"
+                          fill="#c0c0c0"
                         >
                           <path
                             fillRule="evenodd"
@@ -231,13 +305,30 @@ function Banner() {
                     </Box>
                   </FormControl>
                 </Box>
-                <Box flexBasis="50%" ml="2">
+                <Box
+                  flexBasis={{
+                    sm: '100%',
+                    md: '50%',
+                    lg: '50%',
+                    xl: '50%',
+                    base: '100%',
+                  }}
+                  w="100%"
+                  ml={{
+                    sm: '0',
+                    md: '2',
+                    lg: '2',
+                    xl: '2',
+                    base: '0',
+                  }}
+                >
                   <FormControl id="email">
                     <Box pos="relative">
                       <Input
                         pl={'8'}
                         placeholder="Search for 'tennis'"
                         type="text"
+                        w="100%"
                       />
                       <Box pos="absolute" top="3" left="2">
                         <svg
@@ -245,7 +336,7 @@ function Banner() {
                           width="18"
                           height="18"
                           viewBox="0 0 20 20"
-                          fill="#d9d9d9"
+                          fill="#c0c0c0"
                         >
                           <path
                             fillRule="evenodd"
@@ -272,7 +363,18 @@ function Banner() {
               </Button>
             </Box>
             <Box>
-              <Heading as="h3" size="lg" mb="7">
+              <Heading
+                as="h3"
+                size="lg"
+                mb="7"
+                display={{
+                  sm: 'none',
+                  md: 'block',
+                  lg: 'block',
+                  xl: 'block',
+                  base: 'none',
+                }}
+              >
                 See what’s happening
               </Heading>
               <Box display="flex" flexWrap="wrap" justifyContent="flex-start">

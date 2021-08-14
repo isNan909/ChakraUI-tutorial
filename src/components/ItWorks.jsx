@@ -22,7 +22,16 @@ function ItWorks() {
           Meet new people who share your interests through online and in-person
           events. It’s free to create an account.
         </Box>
-        <Grid templateColumns="repeat(3, 1fr)" gap={6}>
+        <Grid
+          templateColumns={{
+            sm: 'repeat(1, 1fr)',
+            md: 'repeat(3, 1fr)',
+            lg: 'repeat(3, 1fr)',
+            xl: 'repeat(3, 1fr)',
+            base: 'repeat(1, 1fr)',
+          }}
+          gap={6}
+        >
           <Box mx="auto" align="center">
             <Image w="100%" boxSize="160px" src={joinGroup} alt="brand" />
             <Heading as="h5" size="md">
@@ -42,10 +51,9 @@ function ItWorks() {
             <Image w="100%" boxSize="160px" src={ticket} alt="brand" />
             <Heading as="h5" size="md">
               <Link>
-                {' '}
                 <Box color="blue.100" pb="4">
                   Join a Group
-                </Box>{' '}
+                </Box>
               </Link>
             </Heading>
             <p>

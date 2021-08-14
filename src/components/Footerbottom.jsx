@@ -23,8 +23,27 @@ function Footerbottom() {
           </Button>
         </Box>
         <Divider my="10" />
-        <Box display="flex" alignItems="top">
-          <Box flex="1">
+        <Box
+          display="flex"
+          flexDirection={{
+            sm: 'column',
+            md: 'row',
+            lg: 'row',
+            xl: 'row',
+            base: 'column',
+          }}
+          alignItems="top"
+        >
+          <Box
+            flex="1"
+            mb={{
+              sm: '10',
+              md: '0',
+              lg: '0',
+              xl: '0',
+              base: '4',
+            }}
+          >
             <Heading size="sm">Your Account</Heading>
             <List mt="4" spacing={2}>
               <ListItem>
@@ -39,7 +58,16 @@ function Footerbottom() {
             </List>
           </Box>
 
-          <Box flex="1">
+          <Box
+            flex="1"
+            mb={{
+              sm: '10',
+              md: '0',
+              lg: '0',
+              xl: '0',
+              base: '4',
+            }}
+          >
             <Heading size="sm">Discover</Heading>
             <List mt="4" spacing={2}>
               <ListItem>
@@ -63,7 +91,16 @@ function Footerbottom() {
             </List>
           </Box>
 
-          <Box flex="1">
+          <Box
+            flex="1"
+            mb={{
+              sm: '10',
+              md: '0',
+              lg: '0',
+              xl: '0',
+              base: '4',
+            }}
+          >
             <Heading size="sm">Your Account</Heading>
             <List mt="4" spacing={2}>
               <ListItem>
@@ -80,7 +117,25 @@ function Footerbottom() {
         </Box>
 
         {/* follow and app icons */}
-        <Box mt="15" d="flex" justifyContent="space-between">
+        <Box
+          mt="15"
+          d="flex"
+          flexDirection={{
+            sm: 'column',
+            md: 'row',
+            lg: 'row',
+            xl: 'row',
+            base: 'column',
+          }}
+          justifyContent="space-between"
+          alignItems={{
+            sm: 'left',
+            md: 'center',
+            lg: 'center',
+            xl: 'center',
+            base: 'left',
+          }}
+        >
           <Box d="flex" flexDirection="column">
             <Box mb="2">Follow us</Box>
             <Box d="flex">
@@ -132,15 +187,33 @@ function Footerbottom() {
               </Link>
             </Box>
           </Box>
-          <Box d="flex">
-            <Image w="128px" p="3" src={androidAppstore}></Image>
-            <Image w="128px" p="3" src={iosAppstore}></Image>
+          <Box
+            d="flex"
+            mt={{
+              sm: '10',
+              md: '0',
+              lg: '0',
+              xl: '0',
+              base: '4',
+            }}
+          >
+            <Image w="128px" h="38px" mr="6" src={androidAppstore}></Image>
+            <Image w="128px" h="38px" src={iosAppstore}></Image>
           </Box>
         </Box>
 
         {/* bottom links */}
-        <Box d="flex" mt="20">
-          {' '}
+        <Box
+          d="flex"
+          mt="20"
+          flexWrap={{
+            sm: 'wrap',
+            md: 'no-wrap',
+            lg: 'no-wrap',
+            xl: 'no-wrap',
+            base: 'wrap',
+          }}
+        >
           <Link mr="5" fontSize="sm">
             © 2021 Meetup
           </Link>
